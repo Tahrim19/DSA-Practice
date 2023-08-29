@@ -46,8 +46,9 @@ void print(){
 void deleteAll(){
 	node* curr = start;
 	while (curr != nullptr){
+		node* temp = curr;
+		curr = curr -> next;
 		delete curr;
-		exit(0); 
 	}
 }
 
