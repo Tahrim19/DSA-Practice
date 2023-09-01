@@ -34,13 +34,22 @@ void print(){
 	}
 }
 
+// since we are deleting using stack, middle node cannot be popped.
 // function to pop a node ( Deletion )
+void PopNode(){
+	node* temp = start; 
+	if(start != nullptr)
+	start = start -> next;
+	start -> prev = nullptr;
+	free(temp);
+}
 
 int main()
 {
 	for(int i = 1 ; i < 5 ; i++){
 		PushNode();
 	}
+	PopNode();
 	print();
 return 0;
 }
