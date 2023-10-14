@@ -92,16 +92,16 @@ void InOrder(BSTNode* node){ // root node will be present in the middle
 void PreOrder(BSTNode* node){ // root node will be present in the starting 
 	if(node!= NULL){
 		cout<<node->data << endl;
-		InOrder(node->left);
-		InOrder(node->right);
+		PreOrder(node->left);
+		PreOrder(node->right);
 	}
 }
 
 // Post order traversal
 void PostOrder(BSTNode* node){ // root node will be present in the end
 	if(node!= NULL){
-		InOrder(node->left);
-		InOrder(node->right);
+		PostOrder(node->left);
+		PostOrder(node->right);
 		cout<<node->data << endl;
 	}
 }
